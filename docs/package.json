@@ -1,0 +1,26 @@
+{
+  "name": "@zk-ui/docs",
+  "version": "1.0.0",
+  "description": "Documentation site",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "@zk-ui/components": "workspace:*",
+    "element-plus": "^2.11.5",
+    "vue": "^3.4.31",
+    "vue-router": "^4.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "unplugin-vue-components": "^30.0.0",
+    "vite": "^5.4.14",
+    "vitepress": "^1.6.4"
+  }
+}
