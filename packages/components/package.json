@@ -1,7 +1,7 @@
 {
   "name": "@zk-ui/components",
   "version": "1.0.0",
-  "description": "component library",
+  "description": "zk-ui component library",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -9,19 +9,27 @@
     ".": {
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
-    }
+    },
+    "./style.css": "./dist/style.css"
   },
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist/*"
   ],
   "scripts": {
     "dev": "vite",
     "build": "vite build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "vue",
+    "components",
+    "ui"
+  ],
+  "author": "zhuxm",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "element-plus": "^2.11.5",
     "vue": "^3.4.31"
