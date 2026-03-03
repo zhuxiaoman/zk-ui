@@ -15,13 +15,6 @@ export default defineConfig({
   title: "zk-ui",
   description: "A zk-ui description",
   head: [
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "https://unpkg.com/element-plus/dist/index.css",
-      },
-    ],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

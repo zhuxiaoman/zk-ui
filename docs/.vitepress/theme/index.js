@@ -1,6 +1,8 @@
 import DefaultTheme from "vitepress/theme";
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
+// 通过导入包的入口来模拟下游项目的使用方式，包入口会导入 element-theme.scss
+import "../../../packages/components/src/index.js";
 
 export default {
   ...DefaultTheme,

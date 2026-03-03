@@ -1,19 +1,11 @@
-import { createApp } from 'vue'
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
-import ZkButton from '../button/index.js'
+import { createApp } from "vue";
+import ElementPlus from "element-plus";
+import "element-plus/dist/index.css";
+import "./styles/element-theme.scss";
+import ZkButton from "../button/index.js";
 
-const app = createApp({
-  template: `
-    <div>
-      <h1>ZK UI Components Demo</h1>
-      <zk-button type="warning">Click me1</zk-button>
-    </div>
-  `,
-  components: {
-    ZkButton
-  }
-})
+const app = createApp();
 
-app.use(ElementPlus)
-app.mount('#app')
+app.use(ElementPlus);
+app.component("zk-button", ZkButton);
+app.mount("#app");

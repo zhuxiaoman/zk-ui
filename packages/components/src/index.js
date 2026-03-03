@@ -1,4 +1,5 @@
 // 导入所有组件
+import './styles/element-theme.scss'
 import ZkButton from '../button/button.vue'
 import ZkTag from '../tag/tag.vue'
 
