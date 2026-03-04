@@ -25,7 +25,6 @@ cd docs
 pnpm docs:dev
 ```
 
-访问 http://localhost:5173 查看文档网站。
 
 ### 构建文档
 

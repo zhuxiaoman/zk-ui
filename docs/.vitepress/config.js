@@ -8,28 +8,30 @@
  */
 import { defineConfig } from "vitepress";
 import path from "path";
-import Components from 'unplugin-vue-components/vite';
+import Components from "unplugin-vue-components/vite";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "zk-ui",
-  description: "A zk-ui description",
-  head: [
-  ],
+  description: "zk-ui文档",
+  head: [],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "首页", link: "/" },
+      { text: "组件", link: "/components" },
+      // { text: "指南", link: "/guide" },
+      // { text: "Examples", link: "/markdown-examples" },
     ],
 
     sidebar: [
       {
-        text: "Examples",
+        text: "组件",
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
-          { text: "组件演示", link: "/components" },
+          { text: '按钮', link: '/componentDocs/button' },
+          { text: '标签', link: '/componentDocs/tag' },
+          // { text: "Markdown Examples", link: "/markdown-examples" },
+          // { text: "Runtime API Examples", link: "/api-examples" },
         ],
       },
     ],
@@ -45,10 +47,10 @@ export default defineConfig({
           // 自定义 resolver 来处理 ZkButton 和 ZkTag
           (name) => {
             // if (name === 'ZkButton' || name === 'ZkTag') {
-              return {
-                importName: name,
-                path: '@zk-ui/components',
-              };
+            return {
+              importName: name,
+              path: "@zk-ui/components",
+            };
             // }
           },
         ],
@@ -58,8 +60,14 @@ export default defineConfig({
     ],
     resolve: {
       alias: {
-        "@zk-ui/components": path.resolve(__dirname, "../../packages/components"),
+        "@zk-ui/components": path.resolve(
+          __dirname,
+          "../../packages/components",
+        ),
       },
     },
+    optimizeDeps: {
+      exclude: ['vitepress']
+    }
   },
 });
