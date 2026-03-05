@@ -11,7 +11,6 @@
       <button class="demo-btn" @click="applyColor">设置主色</button>
     </div>
 
-    <div class="demo-card">这是一个示例卡片，用于观察背景和文字颜色变化。</div>
   </div>
 </template>
 
@@ -72,19 +71,10 @@ function applyColor() {
 
 .demo-input {
   padding: 8px 12px;
-  border: 1px solid var(--vp-c-divider);
+  border: 1px solid var(--el-color-primary);
   border-radius: 4px;
-  background: var(--vp-c-bg-soft);
+  background: var(--el-color-primary-light-9);
   color: var(--vp-c-text-1);
   width: 160px;
-}
-
-.demo-card {
-  margin-top: 16px;
-  padding: 20px;
-  border-radius: 8px;
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-text-1);
-  transition: all 0.3s ease;
 }
 </style>

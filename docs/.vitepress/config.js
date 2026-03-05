@@ -13,7 +13,7 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: "组件",
+        text: "基础组件",
         items: [
           { text: "按钮", link: "/componentDocs/button" },
           { text: "标签", link: "/componentDocs/tag" },

@@ -2,20 +2,34 @@
 const THEME_KEY = "zk-ui-theme";
 const PRIMARY_KEY = "zk-ui-primary";
 
+/**
+ * 将数值限制在指定范围内
+ * @param {number} v - 要限制的数值
+ * @param {number} a - 范围最小值
+ * @param {number} b - 范围最大值
+ * @returns {number} 限制后的数值，如果 v 小于 a 则返回 a，如果 v 大于 b 则返回 b，否则返回 v
+ */
 function clamp(v, a, b) {
   return Math.min(b, Math.max(a, v));
 }
 
+/**
+ * 将十六进制颜色值转换为RGB数组
+ * @param {string} hex - 十六进制颜色值，可以是3位或6位格式，如#fff或#ffffff
+ * @returns {number[]} 返回包含RGB三个数值的数组，每个数值范围0-255
+ */
 function hexToRgb(hex) {
+  // 去掉十六进制值中的#号
   const h = hex.replace("#", "");
+  // 将3位十六进制值转换为6位格式，然后解析为整数
   const bigint = parseInt(
     h.length === 3
-      ? h
-          .split("")
-          .map((c) => c + c)
-          .join("")
-      : h,
-    16,
+      ? h // 如果是3位格式
+          .split("") // 将字符串拆分为字符数组
+          .map((c) => c + c) // 每个字符重复一次，变成6位
+          .join("") // 重新组合成字符串
+      : h, // 如果已经是6位格式，直接使用
+    16, // 指定为16进制解析
   );
   return [(bigint >> 16) & 255, (bigint >> 8) & 255, bigint & 255];
 }
@@ -44,6 +58,11 @@ function darken(hex, percent) {
   return rgbToHex(...mix(rgb, [0, 0, 0], percent));
 }
 
+/**
+ * 根据基础颜色生成不同深浅的色调变体
+ * @param {string} hex - 基础十六进制颜色值
+ * @returns {Object} 包含不同深浅色调的对象
+ */
 function generatePrimaryShades(hex) {
   return {
     primary: hex,
@@ -67,10 +86,18 @@ function applyPrimaryToRoot(shades) {
   root.style.setProperty("--el-color-primary-dark-2", shades.primaryDark2);
 }
 
+/**
+ * 设置主题主色
+ * @param {string} hex - 十六进制颜色值，可以带#号也可以不带
+ */
 export function setPrimaryColor(hex) {
+  // 如果没有提供颜色值，则直接返回
   if (!hex) return;
+  // 确保颜色值以#号开头，如果不是则添加
   const normalized = hex.startsWith("#") ? hex : `#${hex}`;
+  // 生成主色的不同深浅色阶
   const shades = generatePrimaryShades(normalized);
+  // 将生成的色阶应用到根元素
   applyPrimaryToRoot(shades);
   try {
     localStorage.setItem(PRIMARY_KEY, normalized);
