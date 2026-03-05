@@ -15,3 +15,4 @@
 
 export * from './button'
 export * from './tag'
+export { themeUtils } from './src/index.js'

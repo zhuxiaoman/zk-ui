@@ -2,16 +2,11 @@
 
 - **渲染示例：**
 
-<ZkTag>标签</ZkTag>
-<br>
-<ZkTag type="success">成功标签</ZkTag>
-<br>
-<ZkTag type="info">信息标签</ZkTag>
-<br>
-<ZkTag type="warning">警告标签</ZkTag>
-<br>
-<ZkTag type="danger">危险标签</ZkTag>
-<br>
+<ZkTag>标签</ZkTag> &nbsp;
+<ZkTag type="success">成功标签</ZkTag> &nbsp;
+<ZkTag type="info">信息标签</ZkTag> &nbsp;
+<ZkTag type="warning">警告标签</ZkTag> &nbsp;
+<ZkTag type="danger">危险标签</ZkTag> &nbsp;
 <ZkTag closable>可关闭标签</ZkTag>
 
 - **源码展示：**

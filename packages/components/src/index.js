@@ -2,6 +2,7 @@
 import './styles/element-theme.scss'
 import ZkButton from '../button/button.vue'
 import ZkTag from '../tag/tag.vue'
+import * as themeUtils from './utils/theme'
 
 // 组件列表
 const components = [
@@ -28,6 +29,9 @@ export default {
   ZkButton,
   ZkTag
 }
+
+// 导出主题工具
+export { themeUtils }
 
 // 单独导出
 export {

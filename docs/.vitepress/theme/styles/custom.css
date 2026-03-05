@@ -1,0 +1,28 @@
+/* apply theme colors to docs layout */
+html {
+  background-color: var(--el-bg-color);
+  color: var(--el-text-color);
+}
+
+body {
+  background-color: var(--el-bg-color);
+  color: var(--el-text-color);
+}
+
+a {
+  color: var(--el-color-primary);
+}
+
+pre, code {
+  background-color: var(--el-card-bg-color);
+  color: var(--el-text-color);
+}
+
+.vitepress-theme-default-content {
+  background-color: var(--el-bg-color);
+}
+
+/* override sidebar etc */
+.vitepress-theme-default-nav {
+  background-color: var(--el-card-bg-color) !important;
+}
