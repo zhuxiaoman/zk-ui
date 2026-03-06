@@ -5,12 +5,11 @@
     </p>
 
     <div class="demo-controls">
-      <button class="demo-btn" @click="toggleTheme">切换主题</button>
+      <zk-button type="primary" @click="toggleTheme">切换主题</zk-button>
 
       <input v-model="color" placeholder="格式：#ff0000" class="demo-input" />
-      <button class="demo-btn" @click="applyColor">设置主色</button>
+      <zk-button type="primary" @click="applyColor">设置主色</zk-button>
     </div>
-
   </div>
 </template>
 
@@ -53,20 +52,6 @@ function applyColor() {
   margin: 16px 0;
   flex-wrap: wrap;
   align-items: center;
-}
-
-.demo-btn {
-  padding: 8px 16px;
-  border-radius: 4px;
-  border: 1px solid var(--el-color-primary);
-  background: var(--el-color-primary);
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.demo-btn:hover {
-  opacity: 0.8;
 }
 
 .demo-input {

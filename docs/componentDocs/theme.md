@@ -1,7 +1,7 @@
 ## 在线演示
 
 <script setup>
-import ThemeDemo from './ThemeDemo.vue'
+import ThemeDemo from '../components/ThemeDemo.vue'
 </script>
 
 <ThemeDemo />

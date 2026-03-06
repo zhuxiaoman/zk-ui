@@ -4,6 +4,10 @@ import ZkButton from '../button/button.vue'
 import ZkTag from '../tag/tag.vue'
 import * as themeUtils from './utils/theme'
 
+// 导入 Element Plus
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
 // 组件列表
 const components = [
   ZkButton,
@@ -12,6 +16,9 @@ const components = [
 
 // 定义 install 方法，接收 Vue 作为参数
 const install = function (app) {
+  // 安装 Element Plus
+  app.use(ElementPlus)
+
   // 遍历注册所有组件
   components.forEach(component => {
     app.component(component.name, component)

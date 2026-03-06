@@ -13,6 +13,12 @@ export default defineConfig({
     ],
     sidebar: [
       {
+        text: "组件总览",
+        items: [
+          { text: "组件总览", link: "/components" },
+        ],
+      },
+      {
         text: "基础组件",
         items: [
           { text: "按钮", link: "/componentDocs/button" },
@@ -41,10 +47,10 @@ export default defineConfig({
     ],
     resolve: {
       alias: {
-        "@zk-ui/components": path.resolve(
-          __dirname,
-          "../../packages/components",
-        ),
+        // "@zk-ui/components": path.resolve(
+        //   __dirname,
+        //   "../../packages/components",
+        // ),
       },
     },
     optimizeDeps: { exclude: ["vitepress"] },
