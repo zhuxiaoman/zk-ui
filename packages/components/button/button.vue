@@ -21,10 +21,19 @@
 <script setup name="ZkButton">
 import { ElButton } from "element-plus";
 
-const props = withDefaults(defineProps(), {
-  type: "primary",
-  size: "default",
-  disabled: false,
+const props = defineProps({
+  type: {
+    type: String,
+    default: "primary",
+  },
+  size: {
+    type: String,
+    default: "default",
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const emit = defineEmits(["click"]);

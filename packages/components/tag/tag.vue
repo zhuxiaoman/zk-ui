@@ -26,14 +26,35 @@
 <script setup name="ZkTag">
 import { ElTag } from "element-plus";
 
-const props = withDefaults(defineProps(), {
-  type: "",
-  size: "default",
-  closable: false,
-  disableTransitions: false,
-  hit: false,
-  color: "",
-  effect: "light",
+const props = defineProps({
+  type: {
+    type: String,
+    default: "",
+  },
+  size: {
+    type: String,
+    default: "default",
+  },
+  closable: {
+    type: Boolean,
+    default: false,
+  },
+  disableTransitions: {
+    type: Boolean,
+    default: false,
+  },
+  hit: {
+    type: Boolean,
+    default: false,
+  },
+  color: {
+    type: String,
+    default: "",
+  },
+  effect: {
+    type: String,
+    default: "light",
+  },
 });
 
 const emit = defineEmits(["close", "click"]);
