@@ -11,16 +11,16 @@ import ThemeDemo from '../components/ThemeDemo.vue'
 在应用启动处或事件中调用：
 
 ```js
-import { themeUtils } from '@zk-ui/components'
+import { themeUtils } from "@zk-ui/components";
 
 // 切换到深色主题
-themeUtils.setTheme('dark')
+themeUtils.setTheme("dark");
 
 // 切换到浅色主题
-themeUtils.setTheme('light')
+themeUtils.setTheme("light");
 
 // 切换（切换并返回当前主题）
-themeUtils.toggleTheme()
+themeUtils.toggleTheme();
 ```
 
 ## 自定义主色
@@ -28,7 +28,7 @@ themeUtils.toggleTheme()
 设置自定义主色并会自动生成若干色阶（存储于 localStorage）
 
 ```js
-themeUtils.setPrimaryColor('#ff6b6b')
+themeUtils.setPrimaryColor("#ff6b6b");
 ```
 
 ## 自动初始化

@@ -35,8 +35,7 @@ function hexToRgb(hex) {
 }
 
 function rgbToHex(r, g, b) {
-  const toHex = (n) =>
-    clamp(Math.round(n), 0, 255).toString(16).padStart(2, "0");
+  const toHex = (n) => clamp(Math.round(n), 0, 255).toString(16).padStart(2, "0");
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
 }
 
@@ -119,9 +118,7 @@ export function setTheme(theme) {
 export function toggleTheme() {
   const cur =
     localStorage.getItem(THEME_KEY) ||
-    (document.documentElement.getAttribute("data-theme") === "dark"
-      ? "dark"
-      : "light");
+    (document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light");
   const next = cur === "dark" ? "light" : "dark";
   setTheme(next);
   return next;
@@ -139,9 +136,7 @@ export function initTheme() {
 export function getPrimaryColor() {
   return (
     localStorage.getItem(PRIMARY_KEY) ||
-    getComputedStyle(document.documentElement)
-      .getPropertyValue("--el-color-primary")
-      .trim() ||
+    getComputedStyle(document.documentElement).getPropertyValue("--el-color-primary").trim() ||
     "#409EFF"
   );
 }

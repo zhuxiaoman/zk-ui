@@ -13,7 +13,8 @@ a {
   color: var(--el-color-primary);
 }
 
-pre, code {
+pre,
+code {
   background-color: var(--el-card-bg-color);
   color: var(--el-text-color);
 }

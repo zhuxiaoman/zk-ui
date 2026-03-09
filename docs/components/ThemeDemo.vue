@@ -21,8 +21,7 @@ const color = ref("");
 const currentTheme = ref("light");
 
 onMounted(() => {
-  currentTheme.value =
-    document.documentElement.getAttribute("data-theme") || "light";
+  currentTheme.value = document.documentElement.getAttribute("data-theme") || "light";
   color.value = themeUtils.getPrimaryColor();
 });
 

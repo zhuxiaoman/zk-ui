@@ -4,12 +4,12 @@
  * @LastEditors: zhuxiaoman
  * @LastEditTime: 2025-10-24 16:59:07
  * @FilePath: \zk-ui\packages\components\button\index.js
- * @Description: 
+ * @Description:
  */
-import { withInstall } from '../../utils'
-import Button from './button.vue'
+import { withInstall } from "../../utils";
+import Button from "./button.vue";
 
-export const ZkButton = withInstall(Button)
-export default ZkButton
+export const ZkButton = withInstall(Button);
+export default ZkButton;
 
-export * from './'
+export * from "./";

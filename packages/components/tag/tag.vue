@@ -15,34 +15,34 @@
     :hit="props.hit"
     :color="props.color"
     :effect="props.effect"
+    v-bind="$attrs"
     @close="handleClose"
     @click="handleClick"
-    v-bind="$attrs"
   >
     <slot></slot>
   </el-tag>
 </template>
 
 <script setup name="ZkTag">
-import { ElTag } from 'element-plus'
+import { ElTag } from "element-plus";
 
 const props = withDefaults(defineProps(), {
-  type: '',
-  size: 'default',
+  type: "",
+  size: "default",
   closable: false,
   disableTransitions: false,
   hit: false,
-  color: '',
-  effect: 'light'
-})
+  color: "",
+  effect: "light",
+});
 
-const emit = defineEmits(['close', 'click'])
+const emit = defineEmits(["close", "click"]);
 
 const handleClose = (event) => {
-  emit('close', event)
-}
+  emit("close", event);
+};
 
 const handleClick = (event) => {
-  emit('click', event)
-}
+  emit("click", event);
+};
 </script>

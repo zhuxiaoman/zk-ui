@@ -4,13 +4,29 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "pnpm --filter @zk-ui/components dev",
     "build": "pnpm --filter @zk-ui/components build",
     "docs:dev": "cd docs && pnpm dev",
-    "docs:build": "cd docs && pnpm build"
+    "docs:build": "cd docs && pnpm build",
+    "lint:file": "eslint --fix",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint .",
+    "format": "prettier --write \"**/*.{js,cjs,mjs,vue,json,css,scss,md}\" --ignore-path .gitignore",
+    "format:check": "prettier --check \"**/*.{js,cjs,mjs,vue,json,css,scss,md}\" --ignore-path .gitignore"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@vue/eslint-plugin": "^4.2.0",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "^10.8.0",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.1",
+    "vue-eslint-parser": "^10.4.0"
+  }
 }

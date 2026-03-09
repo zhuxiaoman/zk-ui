@@ -6,7 +6,7 @@
 
 export const withInstall = (component) => {
   component.install = (app) => {
-    app.component(component.name || component.__name, component)
-  }
-  return component
-}
+    app.component(component.name || component.__name, component);
+  };
+  return component;
+};

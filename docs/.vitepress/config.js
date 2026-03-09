@@ -14,9 +14,7 @@ export default defineConfig({
     sidebar: [
       {
         text: "组件总览",
-        items: [
-          { text: "组件总览", link: "/components" },
-        ],
+        items: [{ text: "组件总览", link: "/components" }],
       },
       {
         text: "基础组件",
@@ -27,16 +25,14 @@ export default defineConfig({
         ],
       },
     ],
-    socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
-    ],
+    socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
   },
   vite: {
     plugins: [
       Components({
         resolvers: [
           (name) => {
-            if (name.startsWith("Zk")) {
+            if (name.startsWith("zk")) {
               return { importName: name, path: "@zk-ui/components" };
             }
           },

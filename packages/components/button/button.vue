@@ -11,25 +11,25 @@
     :type="props.type"
     :size="props.size"
     :disabled="props.disabled"
-    @click="handleClick"
     v-bind="$attrs"
+    @click="handleClick"
   >
     <slot></slot>
   </el-button>
 </template>
 
 <script setup name="ZkButton">
-import { ElButton } from 'element-plus'
+import { ElButton } from "element-plus";
 
 const props = withDefaults(defineProps(), {
-  type: 'primary',
-  size: 'default',
-  disabled: false
-})
+  type: "primary",
+  size: "default",
+  disabled: false,
+});
 
-const emit = defineEmits(['click'])
+const emit = defineEmits(["click"]);
 
 const handleClick = (event) => {
-  emit('click', event)
-}
+  emit("click", event);
+};
 </script>
