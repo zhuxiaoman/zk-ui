@@ -4,9 +4,8 @@ docs/node_modules/
 packages/components/node_modules/
 
 # 构建输出
-docs/.vitepress/dist/
+**/dist/
 docs/.vitepress/cache/
-packages/components/dist/
 
 # 日志文件
 *.log

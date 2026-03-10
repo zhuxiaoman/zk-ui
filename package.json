@@ -10,6 +10,8 @@
     "build": "pnpm --filter @zk-ui/components build",
     "docs:dev": "cd docs && pnpm dev",
     "docs:build": "cd docs && pnpm build",
+    "components:dev": "cd packages/components && pnpm dev",
+    "components:build": "cd packages/components && pnpm build",
     "lint:file": "eslint --fix",
     "lint": "eslint . --fix",
     "lint:check": "eslint .",
