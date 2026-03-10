@@ -51,4 +51,15 @@ export default defineConfig({
     },
     optimizeDeps: { exclude: ["vitepress"] },
   },
+  server: {
+    port: 5173,
+    host: false,
+    open: true,
+    headers: {
+      "Cache-Control": "public, max-age=31536000",
+    },
+    hmr: {
+      overlay: false,
+    },
+  },
 });

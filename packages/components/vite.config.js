@@ -1,9 +1,26 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
+import { copyFileSync } from "fs";
 
 export default defineConfig(({ command }) => ({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    {
+      name: "copy-readme",
+      closeBundle() {
+        if (command === "build") {
+          const src = resolve(__dirname, "README.md");
+          const dest = resolve(__dirname, "dist", "README.md");
+          try {
+            copyFileSync(src, dest);
+          } catch (error) {
+            console.warn("Could not copy README.md to dist folder:", error.message);
+          }
+        }
+      },
+    },
+  ],
   resolve: {
     alias: {
       vue: "vue/dist/vue.esm-bundler.js",
@@ -24,6 +41,7 @@ export default defineConfig(({ command }) => ({
               // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
               globals: {
                 vue: "Vue",
+                "element-plus": "ElementPlus",
               },
             },
           },
