@@ -32,7 +32,7 @@ export default defineConfig({
       Components({
         resolvers: [
           (name) => {
-            if (name.startsWith("zk")) {
+            if (name.startsWith("Zk")) {
               return { importName: name, path: "@zk-ui/components" };
             }
           },
