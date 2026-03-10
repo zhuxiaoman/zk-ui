@@ -1,7 +1,7 @@
 // 导入所有组件
 import "./styles/element-theme.scss";
-import ZkButton from "../button/button.vue";
-import ZkTag from "../tag/tag.vue";
+import ZkButton from "../button/index.js";
+import ZkTag from "../tag/index.js";
 import * as themeUtils from "./utils/theme";
 
 // 导入 Element Plus
