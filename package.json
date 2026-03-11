@@ -12,6 +12,7 @@
     "docs:build": "cd docs && pnpm build",
     "components:dev": "cd packages/components && pnpm dev",
     "components:build": "cd packages/components && pnpm build",
+    "generate": "cd packages/cli && pnpm dev",
     "lint:file": "eslint --fix",
     "lint": "eslint . --fix",
     "lint:check": "eslint .",

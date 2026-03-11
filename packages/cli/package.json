@@ -1,0 +1,25 @@
+{
+  "name": "@zk-ui/cli",
+  "version": "1.0.0",
+  "description": "CLI tool for generating zk-ui components",
+  "type": "module",
+  "bin": {
+    "zk-ui": "./bin/cli.js"
+  },
+  "scripts": {
+    "dev": "node ./bin/cli.js"
+  },
+  "keywords": [
+    "cli",
+    "component",
+    "generator"
+  ],
+  "author": "zhuxm",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.2.0"
+  },
+  "devDependencies": {}
+}
