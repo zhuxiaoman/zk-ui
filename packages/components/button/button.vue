@@ -8,8 +8,6 @@
 -->
 <template>
   <el-button
-    class="test-btn"
-    style="border-radius: 50%"
     :type="props.type"
     :size="props.size"
     :disabled="props.disabled"
