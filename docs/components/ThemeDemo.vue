@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import { themeUtils } from "@zk-ui/components";
+import { themeUtils } from "@zk-ui/zk-ui";
 
 const color = ref("");
 const currentTheme = ref("light");

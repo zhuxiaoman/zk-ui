@@ -9,7 +9,7 @@
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
-    "@zk-ui/components": "workspace:*",
+    "@zk-ui/zk-ui": "workspace:*",
     "element-plus": "^2.11.5",
     "vue": "^3.4.31",
     "vue-router": "^4.4.0"

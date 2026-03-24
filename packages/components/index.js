@@ -12,11 +12,11 @@
 // export default {
 //   install
 // }
-import { default as ZkUI } from "./src/index.js";
+// import { default as ZkUI } from "./src/index.js";
 
 export * from "./button";
 export * from "./tag";
-export { themeUtils } from "./src/index.js";
+export { themeUtils } from "../utils/theme.js";
 
 // 添加默认导出
-export default ZkUI;
+// export default ZkUI;

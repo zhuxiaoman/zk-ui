@@ -33,7 +33,7 @@ export default defineConfig({
         resolvers: [
           (name) => {
             if (name.startsWith("Zk")) {
-              return { importName: name, path: "@zk-ui/components" };
+              return { importName: name, path: "@zk-ui/zk-ui" };
             }
           },
         ],
@@ -43,9 +43,9 @@ export default defineConfig({
     ],
     resolve: {
       alias: {
-        // "@zk-ui/components": path.resolve(
+        // "@zk-ui/zk-ui": path.resolve(
         //   __dirname,
-        //   "../../packages/components",
+        //   "../../packages/zk-ui",
         // ),
       },
     },

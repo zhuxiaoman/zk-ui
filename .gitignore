@@ -1,7 +1,7 @@
 # 依赖包
 node_modules/
 docs/node_modules/
-packages/components/node_modules/
+packages/zk-ui/node_modules/
 
 # 构建输出
 **/dist/

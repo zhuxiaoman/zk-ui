@@ -1,21 +1,21 @@
-# @zk-ui/components
+# Zkkc-UI
 
 基于 Element Plus 构建的 Vue 3 组件库
 
 ## 简介
 
-zk-ui 是一个基于 Element Plus 封装的 Vue 3 组件库，旨在提供更便捷的 UI 组件和工具函数。
+Zkkc-UI是一个基于 Element Plus 封装的 Vue 3 组件库，旨在提供更便捷的 UI 组件和工具函数。
 
 ## 安装
 
 ```bash
-npm install @zk-ui/components element-plus
+npm install zkkc-ui element-plus
 ```
 
 或
 
 ```bash
-yarn add @zk-ui/components element-plus
+yarn add zkkc-ui element-plus
 ```
 
 ## 使用
@@ -25,8 +25,8 @@ yarn add @zk-ui/components element-plus
 ```javascript
 import { createApp } from 'vue'
 import App from './App.vue'
-import ZkUI from '@zk-ui/components'
-import '@zk-ui/components/dist/style.css'
+import ZkUI from 'zkkc-ui'
+import 'zkkc-ui/dist/style.css'
 
 const app = createApp(App)
 app.use(ZkUI)
@@ -38,8 +38,8 @@ app.mount('#app')
 ```javascript
 import { createApp } from 'vue'
 import App from './App.vue'
-import { ZkButton } from '@zk-ui/components'
-import '@zk-ui/components/dist/style.css'
+import { ZkButton } from 'zkkc-ui'
+import 'zkkc-ui/dist/style.css'
 
 const app = createApp(App)
 app.component('ZkButton', ZkButton)

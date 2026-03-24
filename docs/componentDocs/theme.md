@@ -11,7 +11,7 @@ import ThemeDemo from '../components/ThemeDemo.vue'
 在应用启动处或事件中调用：
 
 ```js
-import { themeUtils } from "@zk-ui/components";
+import { themeUtils } from "zkkc-ui";
 
 // 切换到深色主题
 themeUtils.setTheme("dark");

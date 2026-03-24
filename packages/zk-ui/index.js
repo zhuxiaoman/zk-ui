@@ -3,10 +3,10 @@ import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 
 // 导入所有组件
-import "./styles/element-theme.scss";
-import ZkButton from "../button/index.js";
-import ZkTag from "../tag/index.js";
-import * as themeUtils from "./utils/theme";
+import "../styles/element-theme.scss";
+import ZkButton from "../components/button/index.js";
+import ZkTag from "../components/tag/index.js";
+import * as themeUtils from "../utils/theme";
 
 // 组件列表
 const components = [ZkButton, ZkTag];

@@ -17,7 +17,7 @@ export default [
       "**/*.min.js",
       "docs/.vitepress/dist/**",
       "docs/.vitepress/cache/**",
-      "packages/components/dist/**",
+      "packages/zk-ui/dist/**",
     ],
   },
   {
