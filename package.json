@@ -8,8 +8,8 @@
   "scripts": {
     "dev": "pnpm --filter @zk-ui/components dev",
     "build": "pnpm --filter @zk-ui/components build",
-    "docs:dev": "cd docs && pnpm dev",
-    "docs:build": "cd docs && pnpm build",
+    "docs:dev": "cd docs && pnpm docs:dev",
+    "docs:build": "cd docs && pnpm docs:build",
     "components:dev": "cd packages/components && pnpm dev",
     "components:build": "cd packages/components && pnpm build",
     "generate": "cd packages/cli && pnpm dev",
