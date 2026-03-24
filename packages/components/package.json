@@ -43,5 +43,10 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.2"
+  },
+  "peerDependenciesMeta": {
+    "element-plus": {
+      "optional": false
+    }
   }
 }

@@ -68,7 +68,3 @@ npm publish --access public
 - Element Plus
 - Vite
 - VitePress
-
-## 许可证
-
-MIT
