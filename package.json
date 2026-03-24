@@ -8,8 +8,8 @@
   "scripts": {
     "docs:dev": "cd docs && pnpm docs:dev",
     "docs:build": "cd docs && pnpm docs:build",
-    "components:dev": "cd packages/zk-ui && pnpm dev",
-    "components:build": "cd packages/zk-ui && pnpm build",
+    "zkkcUI:dev": "cd packages/zk-ui && pnpm dev",
+    "zkkcUI:build": "cd packages/zk-ui && pnpm build",
     "generate": "cd packages/cli && pnpm dev",
     "lint:file": "eslint --fix",
     "lint": "eslint . --fix",
